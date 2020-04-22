@@ -16,15 +16,43 @@ export default class App extends React.Component {
             computer: weaponInventory.ROCK,
             winner: ''
         }
+        this.startGame = this.startGame.bind(this)
+        this.chooseWeapon = this.chooseWeapon.bind(this)
+        this.determineWinner = this.determineWinner.bind(this)
     }
 
-    startGame = () => {
+    startGame() {
         let rounds = 0
         let gameIntervals = setInterval(() => {
             rounds ++
             this.setState({
-                computer: weaponInventory(Math.floor(Math.random() * weaponInventory.length))
+                computer: weaponInventory(Math.floor(Math.random() * weaponInventory.length)),
+                winner: ""
             })
+            if(rounds > 5) {
+                clearInterval(gameIntervals)
+                this.setState({
+                    winner: this.determineWinner
+                })
+            }
+        }, 100)
+    }
+
+    determineWinner() {
+        const {user, computer} = this.state
+        //Logic
+        if (user === computer) {
+            return "It's a Tie!!"
+        } else if ((user === 'rock' && computer === 'scissors') || (user === 'scissors' && computer === 'paper') || (user === 'paper' && computer === 'rock')) {
+            return 'You win'
+        }
+        return 'computer win'
+    }
+
+    chooseWeapon(weaponInventory) {
+        this.setState({
+            user: weaponInventory,
+            winner: ''
         })
     }
 
@@ -41,7 +69,11 @@ export default class App extends React.Component {
                 <div className="controllers">
                     <Buttons />
                 </div>
-                <button className="btn">start</button>
+                <button className="btn" onclick={this.startGame}>start</button>
+
+                <div className="info">
+                    <p>{winner ? this.determineWinner : null}</p>
+                </div>
             </div>
         )
     }
