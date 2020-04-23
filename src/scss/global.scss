@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app__container {
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #34495e;
+}
+
+body {
+    background:  ghostwhite;
+}
+
+.game__play {
+    display: flex;
+    margin-top: 8%;
+    justify-content: center;
+}
+
+.players {
+    margin: 0 25px;
+}
+
+.player-weapon {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+}
+
+.controllers {
+    margin: 0 25px;
+}
+
+.details .info {
+    text-align: center;
+    color: #34495e;
+    font-size: 21px;
+}
