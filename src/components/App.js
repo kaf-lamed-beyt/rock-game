@@ -35,7 +35,7 @@ export default class App extends React.Component {
                     winner: this.determineWinner()
                 })
             }
-        }, 1000)
+        }, 180)
     }
 
     determineWinner() {
