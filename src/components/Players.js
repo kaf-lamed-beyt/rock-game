@@ -3,7 +3,7 @@ import rock from '../assets/rock.png'
 import paper from '../assets/paper.png'
 import scissors from '../assets/scissors.png'
 
-const Players = ({weaponInventory}) => {
+const Players = ({ weaponInventory }) => {
     return (
         <div className="players">
             <img

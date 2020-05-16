@@ -1,6 +1,7 @@
 import React from 'react'
 import Players from './Players'
 import '../scss/app.scss'
+import Footer from './Footer'
 
 const weaponInventory = ['rock', 'paper', 'scissors']
 
@@ -32,7 +33,7 @@ export default class App extends React.Component {
             if (rounds > 5) {
                 clearInterval(gameIntervals)
                 this.setState({
-                    winner: this.determineWinner()
+                    winner: this.determineWinner(),
                 })
             }
         }, 180)
@@ -72,7 +73,7 @@ export default class App extends React.Component {
 
                     <div className="controllers">
                         <div className="weapons">
-                        <p>Choose your weapon 😊 </p>
+                            <p>Choose your weapon 😊 </p>
                             <button
                                 className="rock btn"
                                 onClick={() => this.chooseWeapon('rock')}
@@ -102,6 +103,7 @@ export default class App extends React.Component {
                         start
                     </button>
                 </div>
+                <Footer />
             </div>
         )
     }
