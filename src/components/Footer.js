@@ -9,9 +9,9 @@ const Footer = () => {
                     href="https://github.com/Caleb335"
                     className="link__text__white"
                 >
-                    seven 
+                    seven {' '}
                 </a>
-                 © 2020
+                ©2020
             </p>
         </div>
     )

@@ -7,10 +7,6 @@
     font-family: 'Comic Neue', cursive;
 }
 
-.app__container {
-    min-height: 100vh;
-}
-
 h1 {
     text-align: center;
     color: #34495e;
@@ -23,7 +19,13 @@ body {
 
 .game__play {
     display: flex;
+    justify-content: center;
     margin-top: 8%;
+}
+
+.flex__content__center {
+    display: flex;
+    margin-top: 1%;
     justify-content: center;
 }
 
@@ -58,4 +60,21 @@ body {
 .footer__text {
     text-align: center;
     font-size: 20px;
+}
+
+@media only screen and (max-width: 576px) {
+    .game__play {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .controllers .weapons {
+        margin-top: 8%;
+        margin: auto;
+    }
+
+    .footer {
+        margin-top: 25%;
+        margin-bottom: 1%;
+    }
 }

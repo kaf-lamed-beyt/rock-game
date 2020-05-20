@@ -28,18 +28,45 @@
     &:hover {
         cursor: pointer;
         transition: 1s ease-in;
-        background: #e2240f;
+        background: #dba45b;
     }
 }
 
 .details {
-    margin-left: 30%;
+    font-size: 30px;
+    margin-top: 6%;
+    margin: auto;
 }
 
 .details button {
-    margin-top: 10%;
-    height: 50px;
-    width: 180px;
-    font-size: 28px;
-    font-weight: bolder;
+    width: 160px;
+    font-weight: bold;
+    margin-top: 3%;
+    margin-left: 45%;
+}
+
+.details p {
+    font-size: 25px;
+    margin-top: 3%;
+}
+
+@media  only screen and (max-width: 576px) {
+    .weapons {
+        height: 230px;
+        width: 180px;
+    }
+
+    .weapons p {
+        font-size: 15px;
+    }
+
+    .weapons button {
+       margin-left: 16%; 
+    }
+
+    .details button {
+        margin-top: 7%;
+        margin-left: 31%;
+    }
+    
 }

@@ -68,9 +68,10 @@ export default class App extends React.Component {
             <div className="app__container">
                 <h1>Rock Paper Scissors</h1>
                 <div className="game__play">
-                    <Players weaponInventory={user} />
-                    <Players weaponInventory={computer} />
-
+                    <div className="flex__content__center">
+                        <Players weaponInventory={user} />
+                        <Players weaponInventory={computer} />
+                    </div>
                     <div className="controllers">
                         <div className="weapons">
                             <p>Choose your weapon 😊 </p>
@@ -78,19 +79,19 @@ export default class App extends React.Component {
                                 className="rock btn"
                                 onClick={() => this.chooseWeapon('rock')}
                             >
-                                Rock ⛰
+                                Rock
                             </button>
                             <button
                                 className="paper btn"
                                 onClick={() => this.chooseWeapon('paper')}
                             >
-                                Paper 🧻
+                                Paper
                             </button>
                             <button
                                 className="scissors btn"
                                 onClick={() => this.chooseWeapon('scissors')}
                             >
-                                Scissors ✂
+                                Scissors
                             </button>
                         </div>
                     </div>
